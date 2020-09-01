@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
     <style>
+        #logo {
+            padding-top: 10px !important;
+            height: 72px;
+            width: auto;
+            display: block;
+            position: absolute;
+            top: 9%;
+            left: 42%;
+            transition: padding-top 0.4s ease,width 0.4s ease,height 0.4s ease;
+        }
         .buttons {
             background-size: 528px 68px;
             background-position: -132px -38px;
@@ -17,6 +27,7 @@
             white-space: nowrap;
             font-size: 13px;
             font-family: Arial, sans-serif;
+            padding-top: 16px
         }
         .top-leftb:hover, .top-leftb:active {
     text-decoration: underline;
@@ -35,6 +46,7 @@
             padding-left: 15px;
             opacity: 0.75;
             display: inline-block;
+            padding-top:16px;
         }
         .top-left {
             float:left;
@@ -42,6 +54,7 @@
             font-family: Arial, sans-serif;
             padding-right: 15px;
             opacity: 0.75;
+            padding-top: 16px;
         }
         .top-right {
             float: right;
@@ -49,6 +62,7 @@
             font-family: Arial, sans-serif;
             padding-right: 15px;
             opacity: 0.75;
+            padding-top: 16px;
         }
     </style>
     <head>
@@ -62,5 +76,5 @@
            <a class="top-right">Images</a>
            <a class="top-right">Gmail</a>
         </div>
-    </body>
+        <img alt="Google" id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" srcset="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 2x" style="padding-top:109px" data-atf="1" width="272" height="92">    </body>
 </html>
