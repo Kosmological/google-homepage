@@ -1,13 +1,154 @@
 <!DOCTYPE html>
 <html>
     <style>
+        a.lbottom:visited { text-decoration: none; color:#5f6368; }
+        a.lbottom:hover { text-decoration: underline; color:#5f6368; }
+        a.lbottom:focus { text-decoration: none; color:#5f6368; }
+        a.lbottom:hover, a:active { text-decoration: underline; color:#5f6368 }
+        a.rbottom:visited { text-decoration: none; color:#5f6368; }
+        a.rbottom:hover { text-decoration: underline; color:#5f6368; }
+        a.rbottom:focus { text-decoration: none; color:#5f6368; }
+        a.rbottom:hover, a:active { text-decoration: underline; color:#5f6368 }
+       
+        .lbottom {
+            text-decoration: none;
+            white-space: nowrap;
+            padding-left: 27px;
+            margin: 0px; !important
+            font-size: 14px;
+
+        }
+        #lbottom {
+            float: left;
+            margin-left: 30px;
+            line-height: 40px;
+            display: inline-block;
+            color: #5f6368;
+        }
+        .rbottom {
+            text-decoration: none;
+            white-space: nowrap;
+            padding-left: 27px;
+            margin: 0px; !important
+            font-size: 14px;
+
+        }
+        #rbottom {
+            float: right;
+            margin-right: 30px;
+            color: #5f6368;
+            
+        }
+        .canada {
+            font-size: 15px;
+            text-align: left;
+            color: rgba(0,0,0,.54);
+            line-height: 40px;
+            visibility: visable;
+            font-family: Arial, sans-serif;
+        }
+        .fbar3 {
+            margin-left: 30px;
+            text-align: left;
+            color: rgba(0,0,0,.54);
+            padding-left: 27px;
+            font-size: 14px;
+            line-height: 40px;
+            visibility: visible;
+            font-family: Arial, sans-serif;
+        }
+        .fbar2 {
+            border-bottom: 1px solid #e4e4e4;
+            font-size: 14px;
+            line-height: 40px;
+            visibility: visible;
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+        .fbar1 {
+            font-size: 14px;
+            margin-left: -27px;
+            line-height: 40px;
+            visibility: visable;
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+        .lowbar {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+        }
+        #lowbar {
+            background: #f2f2f2;
+            line-height: 40px;
+            min-width: 980px;
+            border-top: 1px solid #e4e4e4;
+            min-width: 400px;
+            visibility: visible;
+            font-size: 10pt;
+            color: #222;
+            font-family: Arial, sans-serif;
+        }
+        .googletext2 {
+            font-family: Arial, sans-serif;
+            font-size: small;
+            position: absolute;
+            top: 68%;
+            left: 52.4%;
+            opacity: 90%;
+            flex-shrink: inherit;
+        }
+        .googletext {
+            font-family: Arial, sans-serif;
+            font-size: small;
+            position: absolute;
+            top: 68%;
+            left: 44.4%;
+            opacity: 90%;
+            flex-shrink: inherit;
+        }
+        .luckybutton {
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            height: 34px;
+            width: 140.467px;
+            background: rgba(207, 207, 207, 0.4); 
+            color:rgba(0,0,0,0.8);
+            border-bottom: solid 0px;
+            border-top: solid 0px;
+            border-left: solid 0px;
+            border-right: solid 0px;
+            border-color: gray;
+            opacity: 73%;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        .searchbutton {
+            position: absolute;
+            top: 57%;
+            left: 40%;
+            height: 34px;
+            width: 125.367px;
+            background: rgba(207, 207, 207, 0.4); 
+            color:rgba(0,0,0,0.8);
+            border-bottom: solid 0px;
+            border-top: solid 0px;
+            border-left: solid 0px;
+            border-right: solid 0px;
+            border-color: gray;
+            opacity: 73%;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
         .searchglass {
             height: 20px;
             width: 20px;
             opacity: 40%;
-            position: absolute;
-            top: 31.6%;
-            left: 30%
+            position: fixed;
+            top: 47%;
+            left: 29.9%;
         }
         .profile {
             background-size: 32px 32px;
@@ -25,11 +166,13 @@
             margin-right: 30px;
         }
         .search {
-            position: absolute;
-            top: 29%;
+            top: 45%;
             height: 44px;
-            left: 29%;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
             width: 582px;
+            flex-grow: 1;
             border-radius: 25px;
             border-top: 1px solid #000000;
             border-bottom: 1px solid #000000;
@@ -40,12 +183,12 @@
         }
         #logo {
             padding-top: 10px !important;
-            height: 72px;
+            height: auto;
             width: auto;
-            display: block;
-            position: absolute;
-            top: 9%;
-            left: 42%;
+            top: 23.5%;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
             transition: padding-top 0.4s ease,width 0.4s ease,height 0.4s ease;
         }
         .buttons {
@@ -111,7 +254,7 @@
         <div>
            <a class="top-leftb">About</a>
            <a class="top-left">Store</a>
-           <img class="profile" src="https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s32-c-mo" srcset="https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s64-c-mo 2x " alt="" aria-hidden="true" data-noaft="" data-atf="1">
+           <img class="profile" src="https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s32-c-mo" srcset="https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/ADGmqu82JygbHsRFaH7PoP1KqRtlqZ6rzgp90sIEC6hp=s32-c-mo 2x " alt="" aria-hidden="true" data-noaft="" data-atf="1">
            <a class="buttons top-right" href="" title="Google apps" aria-expanded="false" role="button" tabindex="0"></a>
            <a class="top-right">Images</a>
            <a class="top-right">Gmail</a>
@@ -119,4 +262,27 @@
         <img alt="Google" id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" srcset="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 1x, https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png 2x" style="padding-top:109px" data-atf="1" width="272" height="92">    </body>
         <input type="text" placeholder="" class="search">
         <svg class="searchglass" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+        <input class="searchbutton" value="Google Search" aria-label="Google Search" name="btnK" type="submit">
+        <input class="luckybutton" value="I'm Feeling Lucky" aria-label="I'm Feeling Lucky" name="btnK" type="submit">
+        <a class="googletext">Google offered in: <a href="" class="googletext2"> Français</a></a>
+        <div id="lowbar" class="lowbar">
+            <div class="fbar1">
+                <div class="fbar2">
+                    <div class="fbar3">
+                        <span class="canada">Canada</span>
+                    </div>
+                </div>
+                <span id="rbottom">
+                    <a class="rbottom" href="">Privacy</a>
+                    <a class="rbottom" href="">Terms</a>
+                    <span style="display:inline-block;position:relative"></span>
+                    <a id="settings" class="rbottom" href="">Settings</a>
+                </span>
+                <span id="lbottom">
+                    <a class="lbottom" href="">Advertising</a>
+                    <a class="lbottom" href="">Business</a>
+                    <a class="lbottom" href="">How Search works</a>
+                </span>
+            </div>
+        </div>
 </html>
